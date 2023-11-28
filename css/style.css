@@ -1,1 +1,22 @@
 /* Denna fil skall innehålla din CSS kod */
+
+#wrapper {
+    display: grid;
+    grid-template-areas: 100px 25px 300px;
+    border: solid 1px black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+header {
+    background-color: #2980b9;
+    text-align: start;
+    padding: 15px;
+    margin: 3px;
+
+}
+
+nav {
+    text-align: start;
+    padding: 2rem;
+}
