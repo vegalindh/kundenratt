@@ -1,6 +1,6 @@
 /* Denna fil skall innehålla din CSS kod */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
 #wrapper {
@@ -15,35 +15,124 @@ header {
     margin: 3px;
     display: flex;
     justify-content: space-between;
-
 }
 
 .active {
-    color: deeppink;
+    color: white;
+    font-weight: 700;
 }
 
 nav {
     background-color: #2980b9;
     padding: 15px;
     margin: 3px;
-    display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: auto;
-  grid-gap: 1em;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 10px;
-    padding-bottom: .5rem;
-  }
-  
-  .grid img {
-    width: 100%;
-    height: auto;
-  }
+nav a {
+    padding-right: 2rem;
+    text-decoration: none;
+    color: black;
+}
 
+#sub-heading {
+    background-color: #2980b9;
+    padding: 15px;
+    margin: 3px;
+    text-align: left;
+}
+
+  .container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 8px 8px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "image1 image2"
+      "image1 image3"
+      "img-text-block img-text-block";
+    padding: 1rem;
+    max-height: 500px;
+}
   
+.image1 { 
+    grid-area: image1;
+    position: relative; 
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 2rem;
+}
+  
+.image2 { grid-area: image2; }
+  
+.image3 { grid-area: image3; }
+
+#img-text-block {
+    grid-area: img-text-block;
+}
+  
+.image1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#img-text-block img {
+    height: auto;
+    max-width: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+}  
+
+.card {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+}  
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover,
+a:hover {
+    opacity: 0,7;
+}
